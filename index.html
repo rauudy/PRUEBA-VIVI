@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hola Vivi</title>
+    <style>
+        :root {
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --accent: #2563eb;
+            --accent-dark: #1d4ed8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 45%, #eef2ff 100%);
+            color: var(--text);
+            display: grid;
+            place-items: center;
+            padding: 24px;
+        }
+
+        .card {
+            width: min(100%, 720px);
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #dbeafe;
+            color: var(--accent-dark);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            line-height: 1.05;
+        }
+
+        p {
+            margin: 0 0 24px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--muted);
+            max-width: 58ch;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+        }
+
+        .button.primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .button.primary:hover {
+            background: var(--accent-dark);
+        }
+
+        .button.secondary {
+            background: #e5e7eb;
+            color: var(--text);
+        }
+
+        .footer {
+            margin-top: 28px;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+    </style>
 </head>
 <body>
-    <h1>HOLA VIVI</h1>
+    <main class="card">
+        <span class="badge">Página sencilla</span>
+        <h1>Hola, Vivi</h1>
+        <p>
+            Esta es una página web simple hecha solo con HTML y CSS.
+            Tiene un diseño limpio, centrado y adaptable para verse bien en móvil y escritorio.
+        </p>
+        <div class="actions">
+            <a class="button primary" href="#">Botón principal</a>
+            <a class="button secondary" href="#">Botón secundario</a>
+        </div>
+        <div class="footer">Puedes cambiar el texto, colores o botones cuando quieras.</div>
+    </main>
 </body>
 </html>
